@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
 using System.Reactive.Linq;
 using System.Reactive.Subjects;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using static System.Console;
 
 namespace lesson6
@@ -20,7 +14,7 @@ namespace lesson6
 
             source
                 .Sample(TimeSpan.FromSeconds(1.0))
-                .Subscribe(x => Console.WriteLine($"received {x}"))
+                .Subscribe(x => WriteLine($"received {x}"))
                 ;
 
             var t = new Thread(() =>
@@ -30,7 +24,7 @@ namespace lesson6
                 {
                     Thread.Sleep(250);
                     source.OnNext(i);
-                    Console.WriteLine($"sent {i}");
+                    WriteLine($"sent {i}");
                     i++;
                 }
             });

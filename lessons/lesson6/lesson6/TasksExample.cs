@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Reactive.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using static System.Console;
 
 namespace lesson6
@@ -24,9 +19,9 @@ namespace lesson6
             {
                 var task = Task.Run(() =>
                 {
-                    WriteLine($"computing result for {x}");
+                    WriteLine($"[T] computing result for {x}");
                     Task.Delay(TimeSpan.FromSeconds(5.0 + random.Next(10))).Wait();
-                    WriteLine($"done computing result for {x}");
+                    WriteLine($"[T] done computing result for {x}");
                     return x * x;
                 });
 
@@ -36,10 +31,10 @@ namespace lesson6
             WriteLine("doing something else ...");
 
             var tasks2 = new List<Task<int>>();
-            foreach (var task in tasks.ToArray())
+            foreach (var task in tasks)
             {
                 tasks2.Add(
-                    task.ContinueWith(t => { WriteLine($"result is {t.Result}"); return t.Result; })
+                    task.ContinueWith(t => { WriteLine($"[C] result is {t.Result}"); return t.Result; })
                 );
             }
 
@@ -71,7 +66,7 @@ namespace lesson6
             for (var i = 100000000; i < int.MaxValue; i++)
             {
                 ct.ThrowIfCancellationRequested();
-                if (await IsPrime(i, ct)) WriteLine($"prime number: {i}");
+                if (await IsPrime(i, ct)) WriteLine($"[P] prime number: {i}");
             }
         }
     }
