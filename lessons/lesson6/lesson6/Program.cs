@@ -4,12 +4,12 @@
     {
         static void Main(string[] args)
         {
-            //PullExample.Run();
+            PullExample.Run();
 
             //PushExample.Run();
             //PushExampleWithSubject.Run();
 
-            TasksExample.Run();
+            //TasksExample.Run();
         }
     }
 }

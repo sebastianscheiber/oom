@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Reactive.Linq;
+using System.Windows.Forms;
 using static System.Console;
 
 namespace lesson6
