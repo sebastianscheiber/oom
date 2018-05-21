@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Task3
 {
-    public interface Asset
+    public interface IAsset
     {
         string Name { get; }
         decimal PrintRestValue();

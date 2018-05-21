@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Task3
 {
-    class Desk : Asset
+    class Desk : IAsset
     {
 
 
@@ -39,6 +39,6 @@ namespace Task3
         }
 
 
-        decimal Asset.PrintRestValue() => restvalue;
+        decimal IAsset.PrintRestValue() => restvalue;
     }
 }

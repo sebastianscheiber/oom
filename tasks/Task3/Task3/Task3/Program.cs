@@ -9,7 +9,7 @@ namespace Task3
     {
         static void Main(string[] args)
         {
-            var items = new Asset[]
+            var items = new IAsset[]
             {
                 new Notebook("Dell", "A1B2C3", 12, 1400),
                 new Notebook("Lenovo", "FF17B9", 13, 1200),

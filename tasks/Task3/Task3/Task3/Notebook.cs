@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Task3
 {
-    class Notebook : Asset
+    class Notebook : IAsset
     {
         private decimal restvalue;
         public Notebook(string name, string serialnumber, decimal inventorynumber, decimal value)
@@ -65,7 +65,7 @@ namespace Task3
                 this.Inventorynumber = newinventorynumber;
         }
 
-        decimal Asset.PrintRestValue() => restvalue;
+        decimal IAsset.PrintRestValue() => restvalue;
     }
 
 
