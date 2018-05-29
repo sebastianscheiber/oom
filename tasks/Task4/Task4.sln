@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task4", "C:\Users\Sebastian\OneDrive - FH Technikum Wien\FH\2.Semester\OOM\OOD\git_repo\oom\tasks\Task4\Task3\Task4.csproj", "{1D17CB9A-7E1D-403A-901B-7D34B6A365E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task4", "Task3\Task4.csproj", "{1D17CB9A-7E1D-403A-901B-7D34B6A365E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {681E5281-D4C0-420A-BF1F-7D1E87DE33B4}
+		SolutionGuid = {98D3A83E-FC30-4C2F-99B2-070C508FD141}
 	EndGlobalSection
 EndGlobal
